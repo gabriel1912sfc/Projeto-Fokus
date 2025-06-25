@@ -8,6 +8,9 @@ const music = new Audio('/sons/luna-rise-part-one.mp3');
 const musicCheckbox = document.getElementById('alternar-musica');
 const startPauseBtn = document.getElementById('start-pause');
 music.loop = true;
+const beepSound = new Audio('/sons/beep.mp3');
+const playSound = new Audio('/sons/play.wav');
+const pauseSound = new Audio('/sons/pause.mp3');
 
 let timeInSeconds = 5;
 let intervalId = null;
@@ -53,6 +56,7 @@ function changeContext(buttonDataContext) {
 //lógica da contagem regressiva.
 function countDown() {
   if(timeInSeconds <= 0){
+    beepSound.play();
     clearTime();
     alert('Tempo Finalizado');
     //define o tempo como 5 segundos novamente. 
@@ -67,8 +71,11 @@ startPauseBtn.addEventListener('click', startPause);
 //inicia ou pausa a contagem regressiva.
 function startPause() {
   if (intervalId) {
-    clearTime()
+    pauseSound.play();
+    clearTime();
     return
+  } else {
+    playSound.play();
   }
 
   intervalId = setInterval(countDown, 1000);

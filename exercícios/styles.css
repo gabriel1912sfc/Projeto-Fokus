@@ -1,11 +1,63 @@
+body {
+  background-color: rgb(30, 25, 43);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  background-color: rgba(84, 10, 153, 0.3);
+  width: 20%;
+  border: 0.2rem solid blueviolet ;
+  border-radius: 10px;
+  height: 500px;
+  
+}
+
 button {
-  background-color: white;
-  border: 10px solid greenyellow;
+  background-color: rgba(84, 10, 153, 0.3);
+  color: white;
+  border: none;
+  border-radius: 10px;
   padding: 10px 10px;
 }
 
 .active {
-  background-color: black;
-  border: 10px solid red;
+  background-color: blueviolet;
+  border: 3px solid rgb(238, 236, 247);
+  border-radius: 10px;
   color: white;
+}
+
+#start-button {
+  background-color: blueviolet;
+  color: white;
+  border: 0px solid white;
+  border-radius: 10px;
+  padding: 15px 20px;
+  font-size: 15px;
+}
+
+#container-music {
+  color: aliceblue;
+  text-decoration: underline;
+}
+
+#countdown {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid rgb(45, 13, 75);
+  border-radius: 10px;
+  padding: 20px 20px;
+  color: aliceblue;
+  font-size: 30px;
 }

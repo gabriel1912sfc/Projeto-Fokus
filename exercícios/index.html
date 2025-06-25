@@ -7,11 +7,25 @@
   <title>Exercícios</title>
 </head>
 <body>
-  <button context="foco" class="active">Foco</button>
-  <button context="short">Descanso curto</button>
-  <button context="long">Descanso longo</button>
+  <div class="wrapper">
+    <div id="container-buttons">
+      <button context="foco" class="active">Foco</button>
+      <button context="short">Descanso curto</button>
+      <button context="long">Descanso longo</button>
+    </div>
+    <div id="container-music">
+      <input type="checkbox" id="alternar-musica">
+      <label for="music">Clique no checkbox para tocar música</label>
+    </div>
+    <div id="container-start">
+      <button id="start-button">Começar</button>
+    </div>
+    <div id="countdown">
+      <p>Tempo Restante:</p>
+    </div>
 
-  <input type="checkbox" id="alternar-musica">
+  </div>
+
   
   <script src="./index.js"></script>
 </body>
